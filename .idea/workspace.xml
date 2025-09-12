@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="136ff98a-666e-4a6e-8bd1-60d0d8bd2b1d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/materias-service/src/main/java/com/unisyn/materias_service/config/OpenApiConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/materias-service/src/main/java/com/unisyn/materias_service/materia/Materia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/materias-service/src/main/java/com/unisyn/materias_service/materia/MateriaDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/materias-service/src/main/java/com/unisyn/materias_service/materia/MateriaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/materias-service/src/main/java/com/unisyn/materias_service/materia/MateriaRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/materias-service/src/main/java/com/unisyn/materias_service/materia/MateriaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/materias-service/src/main/java/com/unisyn/materias_service/materia/MateriaServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/materias-service/src/main/java/com/unisyn/materias_service/redisListen/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/materias-service/src/main/java/com/unisyn/materias_service/redisListen/RedisEventListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/materias-service/src/main/java/com/unisyn/materias_service/redisListen/UsuarioActualizadoEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/materias-service/src/main/java/com/unisyn/materias_service/redisPublish/MateriaActualizadaEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/materias-service/src/main/java/com/unisyn/materias_service/redisPublish/MateriaEventPublisher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/materias-service/src/main/java/com/unisyn/materias_service/security/JwtAuthConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/materias-service/src/main/java/com/unisyn/materias_service/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/materias-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/materias-service/src/main/resources/db/migration/V1__init.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/materias-service/src/main/resources/db/migration/V2__seed.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/tareas-service/src/main/java/com/unisyn/tareas_service/config/OpenApiConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/tareas-service/src/main/java/com/unisyn/tareas_service/redisListen/MateriaActualizadaEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/tareas-service/src/main/java/com/unisyn/tareas_service/redisListen/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/tareas-service/src/main/java/com/unisyn/tareas_service/redisListen/RedisEventListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/tareas-service/src/main/java/com/unisyn/tareas_service/security/JwtAuthConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/tareas-service/src/main/java/com/unisyn/tareas_service/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/tareas-service/src/main/java/com/unisyn/tareas_service/tarea/Tarea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/tareas-service/src/main/java/com/unisyn/tareas_service/tarea/TareaDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/tareas-service/src/main/java/com/unisyn/tareas_service/tarea/TareaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/tareas-service/src/main/java/com/unisyn/tareas_service/tarea/TareaRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/tareas-service/src/main/java/com/unisyn/tareas_service/tarea/TareaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/tareas-service/src/main/java/com/unisyn/tareas_service/tarea/TareaServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/tareas-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/tareas-service/src/main/resources/db/migration/V1__init.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/tareas-service/src/main/resources/db/migration/V2__seed.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/usuarios-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/usuarios-service/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/usuarios-service/src/main/java/com/unisyn/usuarios_service/config/OpenApiConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/usuarios-service/src/main/java/com/unisyn/usuarios_service/redisPublish/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/usuarios-service/src/main/java/com/unisyn/usuarios_service/redisPublish/UsuarioActualizadoEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/usuarios-service/src/main/java/com/unisyn/usuarios_service/redisPublish/UsuarioEventPublisher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/usuarios-service/src/main/java/com/unisyn/usuarios_service/security/JwtAuthConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/usuarios-service/src/main/java/com/unisyn/usuarios_service/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/usuarios-service/src/main/java/com/unisyn/usuarios_service/usuario/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/usuarios-service/src/main/java/com/unisyn/usuarios_service/usuario/UsuarioDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/usuarios-service/src/main/java/com/unisyn/usuarios_service/usuario/UsuarioRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/usuarios-service/src/main/java/com/unisyn/usuarios_service/usuario/UsuarioRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/usuarios-service/src/main/java/com/unisyn/usuarios_service/usuario/UsuarioService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/usuarios-service/src/main/java/com/unisyn/usuarios_service/usuario/UsuarioServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/usuarios-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/usuarios-service/src/main/resources/db/migration/V1__init.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/ProyectoAnalisis/APIS/usuarios-service/src/main/resources/db/migration/V2__seed.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/loopback/api_sales/env.development" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/loopback/api_sales/env.production" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Analisis/loopback/api_sales/env.testing" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Seminario y Práctica/KohaKedu/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Seminario y Práctica/KohaKedu/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Seminario y Práctica/KohaKedu/docker-compose.yml.local" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Seminario y Práctica/KohaKedu/entrypoint.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Seminario y Práctica/KohaKedu/templates/koha-common.cnf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Seminario y Práctica/KohaKedu/templates/koha-no-domain.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Seminario y Práctica/KohaKedu/templates/koha-sites.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Seminario y Práctica/KohaKedu/templates/koha.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/.idea/jpa.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/.idea/webContexts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/java/JPAEntity/Bomba.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/java/JPAEntity/BombaTanque.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/java/JPAEntity/CierreDeCaja.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/java/JPAEntity/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/java/JPAEntity/EncabezadoFactura.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/java/JPAEntity/Evaporacion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/java/JPAEntity/Factura.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/java/JPAEntity/Gasolina.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/java/JPAEntity/GasolinaImpuesto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/java/JPAEntity/Impuesto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/java/JPAEntity/LineaDetalle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/java/JPAEntity/Llenado.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/java/JPAEntity/Tanque.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/java/JPAEntity/Usuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/java/org/example/gassxpress/FacesServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/java/org/example/gassxpress/ManagedBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/java/org/example/gassxpress/RedirectServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/webapp/WEB-INF/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/webapp/vistas/admin/inicioAdmin.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/webapp/vistas/admin/reporteLlenadoEvaporacionAdmin.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/webapp/vistas/admin/reportesCierresDeCajaAdmin.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/webapp/vistas/admin/reportesEvaporaciónAdmin.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/webapp/vistas/admin/reportesFacturasAdmin.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/webapp/vistas/admin/reportesLlenadoAdmin.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/webapp/vistas/admin/reportesVentasAdmin.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/webapp/vistas/despachador/inicioDespachador.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GassXpress/src/main/webapp/vistas/inicioSesion.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProyectoLSO2" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2w1PA7vssg5IHg8t5SmNpMbke0Y" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/beza/Desktop/Seminario y Práctica/KohaKedu&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="136ff98a-666e-4a6e-8bd1-60d0d8bd2b1d" name="Changes" comment="" />
+      <created>1745205962060</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1745205962060</updated>
+      <workItem from="1745205965971" duration="4583000" />
+      <workItem from="1745340156149" duration="231000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
