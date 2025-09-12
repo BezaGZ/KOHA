@@ -1,97 +1,40 @@
+# 🐋 Koha Community en Docker para CUNORI
 
-# 🐋 Koha Community en Docker (Versión Local con Traducción)
+Este repositorio contiene la configuración de Docker para desplegar una instancia local de **Koha Community**, adaptada específicamente para el proyecto de la **Biblioteca Digital del Centro Universitario de Oriente (CUNORI)**.
 
-Este proyecto permite construir y ejecutar una instancia **local de Koha Community** usando Docker. Utiliza una imagen basada en `debian:buster` e instala `koha-common`, conectándose a un contenedor MariaDB y Memcached.
-
----
-
-## 📦 Estructura del proyecto
-
-```
-.
-├── Dockerfile                  # Imagen personalizada de Koha
-├── docker-compose.yml.local   # Definición de servicios (Koha, DB, Memcached)
-├── entrypoint.sh              # Script de inicialización
-└── templates/                 # Archivos de configuración dinámicos
-    ├── koha-common.cnf
-    ├── koha-no-domain.conf
-    ├── koha-sites.conf
-    └── koha.conf
-```
+El objetivo es proporcionar un entorno de desarrollo y pruebas que sea fácil de instalar y gestionar.
 
 ---
 
-## ⚙️ ¿Qué hace este setup?
+## 📖 Documentación Completa y Manual de Instalación
 
-1. Construye una imagen Docker personalizada con Koha instalado.
-2. Usa `entrypoint.sh` para:
-   - Crear la base de datos (`koha-create`)
-   - Configurar Apache
-   - Activar Plack y Zebra
-   - Instalar los idiomas seleccionados
-3. Arranca la interfaz STAFF y el OPAC en puertos accesibles desde localhost.
+Toda la guía de instalación, configuración, uso y detalles técnicos del proyecto se encuentran en nuestro sitio de documentación oficial.
 
----
+### **[➡️ Acceder a la Documentación Completa](https://ingenieria-usac-edu.gitbook.io/documentacion-koha-community/)**
 
-## 🛠️ Requisitos previos
+La documentación incluye:
 
-- Docker
-- Docker Compose
+* **Manual de Instalación** paso a paso.
+* **Manual de Configuración Inicial** para adaptar Koha.
+* **Manual de Operación y Gestión** para el uso diario.
+* **Manual de Respaldo y Recuperación** de datos.
 
 ---
 
-## 🚀 Cómo iniciar
+## 🚀 Inicio Rápido (Para Usuarios Avanzados)
 
-### 1. Construcción e inicio
+Si ya tienes experiencia y solo quieres levantar el proyecto:
 
 ```bash
+# 1. Clona el repositorio
+git clone [https://github.com/BezaGZ/KOHA.git](https://github.com/BezaGZ/KOHA.git)
+
+# 2. Entra al directorio
+cd KOHA
+
+# 3. Levanta los servicios
 docker-compose -f docker-compose.yml.local up -d --build
-```
 
-Esto creará y levantará 3 servicios:
-- `koha` → servicio principal
-- `koha-db` → MariaDB 10.3
-- `memcached` → caché para rendimiento
-
-### 2. Obtener credenciales
-
-```bash
-docker exec -ti koha koha-passwd defaultlibraryname
-```
-
-El usuario será:
-```bash
-koha_defaultlibraryname
-```
-
----
-
-## 🌐 Acceso
-
-- STAFF (administración): [http://localhost:8080](http://localhost:8080)
-- OPAC (público): [http://localhost](http://localhost)
-
----
-
-## 🌍 Idiomas incluidos
-
-Este setup incluye soporte multilenguaje:
-```yaml
-KOHA_TRANSLATE_LANGUAGES: "es-ES,en"
-```
-
-Puedes modificar este valor para agregar más idiomas en el archivo `docker-compose.yml.local`.
-
----
-
-## 📌 Notas
-
-- Este entorno es solo para pruebas/desarrollo local.
-- La instancia se llama `defaultlibraryname` por defecto. Puedes cambiarla con la variable `LIBRARY_NAME`.
-- Si el contenedor ya fue levantado una vez, se detectará y no repetirá la configuración.
-
----
-
-## ✨ Créditos
-
-Basado en la imagen de [Kedu SCCL](https://github.com/Kedu-SCCL/docker-koha-community), adaptado para entorno local.
+## Creditos
+Créditos
+Este proyecto está basado en la imagen y configuración de Kedu SCCL, con adaptaciones para un entorno local y los requerimientos específicos de CUNORI.
