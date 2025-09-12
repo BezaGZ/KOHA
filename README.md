@@ -34,7 +34,10 @@ cd KOHA
 
 # 3. Levanta los servicios
 docker-compose -f docker-compose.yml.local up -d --build
+```
 
-## Creditos
+---
+
+## ✨ Creditos
 Créditos
 Este proyecto está basado en la imagen y configuración de Kedu SCCL, con adaptaciones para un entorno local y los requerimientos específicos de CUNORI.
