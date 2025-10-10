@@ -15,7 +15,7 @@ Si ya tienes experiencia y solo quieres levantar el proyecto:
 git clone https://github.com/BezaGZ/KOHA.git
 
 # 2. Entra al directorio
-cd KOHA
+cd KOHA/KOHACUNORI
 
 # 3. Levanta los servicios
 docker-compose  up -d --build
