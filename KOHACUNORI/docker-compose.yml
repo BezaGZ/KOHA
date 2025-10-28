@@ -19,6 +19,8 @@ services:
     ports:
       - "80:80"
       - "8080:8080"
+    volumes:                             
+      - koha-data:/var/lib/koha/biblioteca 
 
   koha-db:
     container_name: koha-db
@@ -26,7 +28,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: secret
     volumes:
-      - koha-datos:/var/lib/mysql
+      - koha-datos:/var/lib/mysql        
     image: mariadb:10.3
 
   memcached:
@@ -37,4 +39,6 @@ services:
 
 volumes:
   koha-datos:
-    external: true
+    driver: local
+  koha-data:
+    driver: local

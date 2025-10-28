@@ -4,6 +4,7 @@ services:
     build:
       context: .
     container_name: koha
+    restart: unless-stopped
     cap_add:
       - SYS_NICE
       - DAC_READ_SEARCH
@@ -18,21 +19,28 @@ services:
     ports:
       - "80:80"
       - "8080:8080"
+    volumes:
+      - koha-data:/var/lib/koha/biblioteca 
 
   koha-db:
     container_name: koha-db
+    restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: secret
     volumes:
-      - koha-datos:/var/lib/mysql
-
+      - koha-datos:/var/lib/mysql        
     image: mariadb:10.3
 
   memcached:
     command: memcached -m 64m
     container_name: memcached
+    restart: unless-stopped
     image: memcached
 
 volumes:
   koha-datos:
-    external: local
+    external: true                         #Usa volúmenes existentes restaurados
+    name: koha-datos
+  koha-data:
+    external: true
+    name: koha-data
