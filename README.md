@@ -6,7 +6,7 @@ El objetivo es proporcionar un entorno de desarrollo y pruebas que sea fácil de
 
 ---
 
-## ⚙️ Requisitos Previos
+##  Requisitos Previos
 
 Antes de comenzar, asegúrate de tener instalados los siguientes componentes:
 
@@ -15,7 +15,7 @@ Antes de comenzar, asegúrate de tener instalados los siguientes componentes:
 
 ---
 
-## 🚀 Instalación Limpia (Desde Cero)
+##  Instalación Limpia (Desde Cero)
 
 Sigue estos pasos para realizar una instalación limpia que crea automáticamente los dos volúmenes necesarios.
 
@@ -55,11 +55,11 @@ Copia la contraseña que aparece para usarla en el acceso.
 
 ---
 
-## 🔄 Migración (Backup y Restauración Completa)
+##  Migración (Backup y Restauración Completa)
 
 Para migrar una instancia existente de Koha que utiliza los dos volúmenes `koha-datos` y `koha-data`, sigue las instrucciones a continuación.
 
-### 📦 Parte A: Crear la Copia de Seguridad (Máquina de Origen)
+###  Parte A: Crear la Copia de Seguridad (Máquina de Origen)
 
 1. Detén los servicios de Koha:
 
@@ -83,7 +83,7 @@ Para migrar una instancia existente de Koha que utiliza los dos volúmenes `koha
 
 ---
 
-### 📥 Parte B: Restaurar la Copia de Seguridad (Nueva Máquina)
+###  Parte B: Restaurar la Copia de Seguridad (Nueva Máquina)
 
 1. Navega a la carpeta de restauración:
 
@@ -102,10 +102,10 @@ Para migrar una instancia existente de Koha que utiliza los dos volúmenes `koha
 
     ```bash
     # Restaurar koha-datos
-    docker run --rm -v koha-datos:/data -v "$(pwd)":/backup alpine tar xzf /backup/koha-db-backup_datos_FECHA.tar.gz -C /data
+    docker run --rm -v koha-datos:/data -v "$(pwd)":/backup alpine tar xzf /backup/koha-db-backup_FECHA.tar.gz -C /data
 
     # Restaurar koha-data
-    docker run --rm -v koha-data:/data -v "$(pwd)":/backup alpine tar xzf /backup/koha-db-backup_data_FECHA.tar.gz -C /data
+    docker run --rm -v koha-data:/data -v "$(pwd)":/backup alpine tar xzf /backup/koha-files-backup_FECHA.tar.gz -C /data
     ```
 
 4. Construye y levanta el entorno:
@@ -124,7 +124,7 @@ Para migrar una instancia existente de Koha que utiliza los dos volúmenes `koha
 
 ---
 
-## 🛠️ Scripts Recomendados para Backup y Restauración
+##  Scripts Recomendados para Backup y Restauración
 
 Para facilitar el proceso de backup y restauración, aquí tienes dos scripts recomendados:
 
@@ -134,8 +134,8 @@ Para facilitar el proceso de backup y restauración, aquí tienes dos scripts re
 @echo off
 set FECHA=%DATE:~6,4%-%DATE:~3,2%-%DATE:~0,2%
 docker-compose down
-docker run --rm -v koha-datos:/data -v "%cd%":/backup alpine tar -czf /backup/koha-db-backup_datos_%FECHA%.tar.gz -C /data .
-docker run --rm -v koha-data:/data -v "%cd%":/backup alpine tar -czf /backup/koha-db-backup_data_%FECHA%.tar.gz -C /data .
+docker run --rm -v koha-datos:/data -v "%cd%":/backup alpine tar -czf /backup/koha-db-backup_%FECHA%.tar.gz -C /data .
+docker run --rm -v koha-data:/data -v "%cd%":/backup alpine tar -czf /backup/koha-files-backup_%FECHA%.tar.gz -C /data .
 docker-compose up -d --build
 echo Backup completado con fecha %FECHA%.
 pause
@@ -156,8 +156,8 @@ docker-compose down
 docker volume create koha-datos
 docker volume create koha-data
 
-docker run --rm -v koha-datos:/data -v "$(pwd)":/backup alpine tar xzf /backup/koha-db-backup_datos_${FECHA}.tar.gz -C /data
-docker run --rm -v koha-data:/data -v "$(pwd)":/backup alpine tar xzf /backup/koha-db-backup_data_${FECHA}.tar.gz -C /data
+docker run --rm -v koha-datos:/data -v "$(pwd)":/backup alpine tar xzf /backup/koha-db-backup_${FECHA}.tar.gz -C /data
+docker run --rm -v koha-data:/data -v "$(pwd)":/backup alpine tar xzf /backup/koha-files-backup_${FECHA}.tar.gz -C /data
 
 docker-compose up -d --build
 echo "Restauración completada para la fecha ${FECHA}."
@@ -168,7 +168,7 @@ echo "Restauración completada para la fecha ${FECHA}."
 
 ---
 
-## 🔑 Acceso Final
+##  Acceso Final
 
 - **URL:** [http://localhost:80](http://localhost:8080)  
 - **Usuario:** `koha_biblioteca`  
@@ -176,7 +176,7 @@ echo "Restauración completada para la fecha ${FECHA}."
 
 ---
 
-## 📝 Notas Adicionales
+##  Notas Adicionales
 
 - Revisa los archivos `docker-compose.yml` para entender la configuración de volúmenes y servicios.  
 - Puedes personalizar los nombres de los volúmenes y archivos de backup según tu entorno, pero asegúrate de actualizar los comandos y scripts en consecuencia.  
@@ -185,6 +185,6 @@ echo "Restauración completada para la fecha ${FECHA}."
 
 ---
 
-## 🙌 Créditos
+##  Créditos
 
 Este proyecto está basado en la imagen y configuración de **Kedu SCCL**, con adaptaciones para un entorno local y los requerimientos específicos de **CUNORI**.
