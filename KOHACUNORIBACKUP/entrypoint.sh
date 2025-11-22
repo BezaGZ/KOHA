@@ -36,6 +36,32 @@ update_koha_database_conf () {
     envsubst < /docker/templates/koha-common.cnf > /etc/mysql/koha-common.cnf
 }
 
+# NUEVO: Función para actualizar koha-conf.xml con la configuración correcta de memcached
+update_koha_conf_memcached () {
+    echo "*** Updating koha-conf.xml with correct memcached configuration"
+    local koha_conf="/etc/koha/sites/${LIBRARY_NAME}/koha-conf.xml"
+    
+    if [ -f "$koha_conf" ]; then
+        # Actualizar memcached_servers si existe
+        if grep -q "<memcached_servers>" "$koha_conf"; then
+            sed -i "s|<memcached_servers>.*</memcached_servers>|<memcached_servers>$MEMCACHED_SERVERS</memcached_servers>|" "$koha_conf"
+            echo "*** Updated memcached_servers to: $MEMCACHED_SERVERS"
+        fi
+        
+        # Actualizar memcached_namespace si existe
+        if grep -q "<memcached_namespace>" "$koha_conf"; then
+            sed -i "s|<memcached_namespace>.*</memcached_namespace>|<memcached_namespace>$MEMCACHED_PREFIX</memcached_namespace>|" "$koha_conf"
+            echo "*** Updated memcached_namespace to: $MEMCACHED_PREFIX"
+        fi
+        
+        # Verificar la configuración
+        echo "*** Memcached configuration in koha-conf.xml:"
+        grep -A 1 "memcached" "$koha_conf" | head -4 || echo "No memcached config found"
+    else
+        echo "*** Warning: koha-conf.xml not found at $koha_conf"
+    fi
+}
+
 fix_database_permissions () {
     echo "*** Fixing database permissions to be able to use an external server"
     # TODO: restrict to the docker container private IP
@@ -103,6 +129,8 @@ create_db () {
         echo "$LIBRARY_NAME:root:$DB_ROOT_PASSWORD:koha_$LIBRARY_NAME:$DB_HOST" > /etc/koha-passwd
         koha-create --use-db $LIBRARY_NAME --passwdfile /etc/koha-passwd
         rm -fr /etc/koha-passwd
+        # NUEVO: Actualizar koha-conf.xml después de usar base de datos existente
+        update_koha_conf_memcached
         # Needed because 'koha-create' restarts apache and puts process in background"
         service apache2 stop
         echo "*** Manual indexing is needed..."
@@ -110,6 +138,8 @@ create_db () {
     else
         echo "*** koha-create with db"
         koha-create --create-db $LIBRARY_NAME
+        # NUEVO: Actualizar koha-conf.xml después de crear base de datos
+        update_koha_conf_memcached
         # Needed because 'koha-create' restarts apache and puts process in background"
         service apache2 stop
         fix_database_permissions
@@ -159,6 +189,8 @@ if [ ! -f /etc/configured ]; then
 else
     # 2nd+ executions
     echo "*** Looks already configured"
+    # NUEVO: Actualizar memcached en cada inicio (por si cambió la configuración)
+    update_koha_conf_memcached
 fi
 
 start_koha
