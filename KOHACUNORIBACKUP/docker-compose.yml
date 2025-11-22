@@ -16,6 +16,7 @@ services:
       KOHA_TRANSLATE_LANGUAGES: "es-ES,en"
       LIBRARY_NAME: biblioteca
       INTRAPORT: 8080
+      MEMCACHED_SERVERS: memcached:11211
     ports:
       - "80:80"
       - "8080:8080"
